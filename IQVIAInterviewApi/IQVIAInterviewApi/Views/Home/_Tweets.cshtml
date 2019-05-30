@@ -1,0 +1,17 @@
+﻿@using IQVIAInterviewApi.Models
+@model List<TweetModel>
+
+<h2>Total Tweets: @Model.Count</h2>
+
+@foreach (TweetModel tweet in Model)
+{
+    <div>
+        <p>
+            @tweet.Id
+        </p>
+        <p>@tweet.Stamp</p>
+        <p>
+            @tweet.Text
+        </p>
+    </div>
+}
