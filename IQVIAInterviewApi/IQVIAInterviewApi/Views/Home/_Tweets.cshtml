@@ -3,15 +3,21 @@
 
 <h2>Total Tweets: @Model.Count</h2>
 
-@foreach (TweetModel tweet in Model)
-{
-    <div>
-        <p>
-            @tweet.Id
-        </p>
-        <p>@tweet.Stamp</p>
-        <p>
-            @tweet.Text
-        </p>
-    </div>
-}
+<div class="row" style="margin-bottom:5px">
+    <input class="search form-control" placeholder="Search Stamp, Id, or Text"/>
+</div>
+
+<div class="row">
+    @foreach (TweetModel tweet in Model)
+    {
+        <div class="card col-3 p-0">
+            <div class="card-header">
+                @tweet.Stamp
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Id: @tweet.Id</h5>
+                <p class="card-text">@tweet.Text</p>
+            </div>
+        </div>
+    }
+</div>

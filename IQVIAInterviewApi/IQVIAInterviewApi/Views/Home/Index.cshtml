@@ -5,6 +5,10 @@
     ViewBag.Title = "Home Page";
 }
 
+@section scripts {
+
+    <script src="~/Scripts/search.js"></script>
+}
 
 <div id="tweets">
     @Html.Partial("_Tweets", Model)
